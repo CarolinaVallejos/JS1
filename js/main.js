@@ -67,7 +67,8 @@ let division = dividir(cantidad, cuotas)
 console.log("Usted debe pagar " + cuotas + " cuotas de " + division)
 
 */
-// Actividad Complementaria
+
+
 // Array
 
 
@@ -75,9 +76,9 @@ let NombreUsuario = prompt ("Ingresar Nombre");
 alert ("El nombre Ingresado es :"+ " " +NombreUsuario)
 
 let HorasTrabajadas = parseInt(prompt("Ingresar Horas"));
-alert("Horas Ingresadas");
+alert("Evaluando Horas Ingresadas");
 
-
+ //Reduce
 const RegistroHoras = [8,10,6,9,12,15,7]
 RegistroHoras.push(HorasTrabajadas)
 console.log(RegistroHoras.length)
@@ -90,10 +91,26 @@ const totalHoras = RegistroHoras.reduce((acumulador, elemento) => acumulador + e
 console.log(totalHoras)
 
 
+// Verificación
+
+while (HorasTrabajadas < 0 || isNaN(HorasTrabajadas)) {
+    alert ("Valor Inválido");
+    } HorasTrabajadas = prompt ("Ingrese un nuevo valor");
+     
 
 
+//MIN MAX- Horas
+console.log( Math.max(...RegistroHoras ) )   
+ 
+//SORT
+const ItemsHoras = [...RegistroHoras];
+ItemsHoras.sort(function(a, b) {
+    return a - b;
+  });
+  console.log(ItemsHoras);
 
-
+//Date
+console.log( new Date() )
 
 
 
